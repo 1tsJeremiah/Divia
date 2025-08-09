@@ -1,6 +1,6 @@
 # Tarot Action API
 
-An HTTP API that deals a Celtic Cross tarot spread and returns a chat-ready reading. Designed to be called by a custom GPT Action (e.g., **Diviaster Tarot**).
+An HTTP API that deals a Celtic Cross tarot spread and returns a chat-ready reading. Designed to be called by a custom GPT Action (e.g., **DiviA**).
 
 ## Quick start (Docker)
 ```bash
@@ -25,7 +25,7 @@ Tool-use instruction suggestion:
 
 When the user asks for a reading, call readTarot with any given seed and reversals preference. Show the chat string to the user and keep the JSON for follow-ups.
 
-Name your GPT tool “Diviaster Tarot”.
+Name your GPT tool “DiviA”.
 
 ## Local dev
 ```bash
