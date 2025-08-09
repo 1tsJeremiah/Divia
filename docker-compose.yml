@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    image: tarot-action-api:latest
+    container_name: tarot-action-api
+    ports:
+      - "8787:8787"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8787/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped

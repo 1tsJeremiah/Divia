@@ -1,0 +1,49 @@
+openapi: 3.1.0
+info:
+  title: Tarot Action API
+  version: 1.0.0
+servers:
+  - url: https://divia.pegasuswingman.com
+paths:
+  /tarot/read:
+    post:
+      operationId: readTarot
+      summary: Deal a Celtic Cross and return the reading
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                seed:
+                  type: string
+                  nullable: true
+                allowReversals:
+                  type: boolean
+                  default: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spread: { type: object }
+                  analysis: { type: object }
+                  chat: { type: string }
+  /tarot/last:
+    get:
+      operationId: lastTarot
+      summary: Get last dealt spread (if any)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spread: { type: object }
+                  analysis: { type: object }
