@@ -1,24 +1,24 @@
 openapi: 3.1.0
 info:
-  title: Tarot Action API
+  title: Diviaster Tarot Action API
   version: 1.0.0
 servers:
-  - url: https://YOUR-DOMAIN
+  - url: https://divia.pegasuswingman.com
 paths:
   /tarot/read:
     post:
       operationId: readTarot
-      summary: Deal a Celtic Cross and return the reading
+      summary: Deal a Celtic Cross spread and return a chat-ready reading
       requestBody:
         required: false
         content:
           application/json:
             schema:
               type: object
+              additionalProperties: false
               properties:
                 seed:
                   type: string
-                  nullable: true
                 allowReversals:
                   type: boolean
                   default: true
@@ -30,13 +30,14 @@ paths:
               schema:
                 type: object
                 properties:
-                  spread: { type: object }
-                  analysis: { type: object }
-                  chat: { type: string }
+                  chat:
+                    type: string
+                  spread:
+                    type: object
   /tarot/last:
     get:
       operationId: lastTarot
-      summary: Get last dealt spread (if any)
+      summary: Get the last dealt spread/analysis
       responses:
         '200':
           description: OK
@@ -45,5 +46,21 @@ paths:
               schema:
                 type: object
                 properties:
-                  spread: { type: object }
-                  analysis: { type: object }
+                  chat:
+                    type: string
+                  spread:
+                    type: object
+        '204':
+          description: No content
+  /:
+    get:
+      operationId: health
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok

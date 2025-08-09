@@ -16,6 +16,22 @@ GET /tarot/last → returns the last dealt spread/analysis
 
 GET / → health text
 
+## Verification
+
+### Local
+
+```bash
+BASE="http://localhost:8787"
+./scripts/test_endpoints.sh "$BASE"
+```
+
+### Production
+
+```bash
+BASE="https://divia.pegasuswingman.com"
+./scripts/test_endpoints.sh "$BASE"
+```
+
 ## Wire into a GPT (Actions)
 Deploy this API and note the public HTTPS base URL.
 
