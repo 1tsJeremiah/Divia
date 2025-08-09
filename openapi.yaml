@@ -3,7 +3,7 @@ info:
   title: Tarot Action API
   version: 1.0.0
 servers:
-  - url: https://divia.pegasuswingman.com
+  - url: https://YOUR-DOMAIN
 paths:
   /tarot/read:
     post:

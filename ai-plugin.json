@@ -5,8 +5,8 @@
 "description_for_human": "Deal a Celtic Cross and get a chat-ready reading.",
 "description_for_model": "Deal a Celtic Cross, return spread, analysis, and a formatted chat string.",
 "auth": { "type": "none" },
-"api": { "type": "openapi", "url": "https://divia.pegasuswingman.com/openapi.yaml" },
-"logo_url": "https://divia.pegasuswingman.com/logo.png",
-"contact_email": "support@divia.pegasuswingman.com",
-"legal_info_url": "https://divia.pegasuswingman.com/policy"
+"api": { "type": "openapi", "url": "https://YOUR-DOMAIN/openapi.yaml" },
+"logo_url": "https://YOUR-DOMAIN/logo.png",
+"contact_email": "support@YOUR-DOMAIN",
+"legal_info_url": "https://YOUR-DOMAIN/policy"
 }
