@@ -1,3 +1,4 @@
+import "./bootstrap";
 import "dotenv/config";
 import http from "node:http";
 import { orchestrate } from "./run.js";
