@@ -39,7 +39,7 @@ pnpm dev
 ## GitHub connector
 
 In ChatGPT, enable the GitHub connector and search
-`repo:1tsJeremiah/divia import` if the repo hasn't been indexed yet. This
+`repo:1tsjeremiah/divia import` if the repo hasn't been indexed yet. This
 forces a manual indexing pass.
 
 ## File search uploads
