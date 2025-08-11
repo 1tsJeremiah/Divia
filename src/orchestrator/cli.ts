@@ -1,5 +1,5 @@
-import "./bootstrap";
 #!/usr/bin/env node
+import "./bootstrap";
 import "dotenv/config";
 import { orchestrate } from "./run.js";
 
