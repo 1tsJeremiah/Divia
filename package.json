@@ -5,28 +5,13 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "test": "node --test",
-    "dev": "tsx src/orchestrator/serve.ts",
-    "agent:chat": "tsx src/orchestrator/cli.ts",
-    "agent:test": "vitest run",
-    "ingest": "tsx scripts/ingest.ts"
+    "test": "node --test"
   },
   "dependencies": {
-    "@openai/agents": "^0.0.15",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "openai": "^5.12.2",
-    "p-queue": "^8.1.0",
-    "p-retry": "^6.2.1",
-    "pino": "^9.8.0",
-    "undici": "^7.13.0",
-    "zod": "<=3.25.67"
+    "express": "^4.19.2"
   },
   "devDependencies": {
-    "@types/node": "^24.2.1",
-    "tsx": "^4.20.3",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "wrangler": "^4.28.1"
   }
 }
