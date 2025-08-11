@@ -1,0 +1,38 @@
+openapi: 3.1.0
+info:
+  title: Divia Actions
+  version: 0.1.0
+servers:
+  - url: https://divia.your-domain.example
+paths:
+  /api/readTarot:
+    post:
+      summary: Read a tarot spread
+      security: [{ api_key: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [question]
+              properties:
+                spread: { type: string, enum: [single, pair, celtic_cross], default: single }
+                question: { type: string }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spread: { type: string }
+                  cards: { type: array, items: { type: string } }
+                  reading: { type: string }
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: X-API-Key
+      in: header

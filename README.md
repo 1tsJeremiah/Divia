@@ -56,3 +56,12 @@ Put behind a reverse proxy for TLS in production.
 
 ## License
 MIT
+
+## Agents Quickstart
+
+```bash
+cp .env.example .env
+# edit with your OpenAI key
+pnpm install
+pnpm agent:chat "Celtic cross about focus"
+```
